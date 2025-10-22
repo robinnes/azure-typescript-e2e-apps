@@ -6,8 +6,8 @@ import { convertFileToArrayBuffer } from './lib/convert-file-to-arraybuffer';
 
 import './App.css';
 
-// Used only for local development
-const API_SERVER = import.meta.env.VITE_API_SERVER as string;
+// Use empty string for production (Azure Static Web Apps), environment variable for local development
+const API_SERVER = import.meta.env.VITE_API_SERVER || '';
 
 type SasResponse = {
   url: string;
